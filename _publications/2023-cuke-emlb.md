@@ -7,7 +7,7 @@ excerpt: |
     This research provides a benchmark for event-based camera denoising, including an
     event-based dataset with various noise levels and types and a nonreference event
     denoising metric.
-date: 2023-04-20
+date: 2023-03-20
 image: 'cuke-emlb.webp'
 urls: |
     [**Paper**](https://arxiv.org/abs/2303.11997) \| 
