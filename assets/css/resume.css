@@ -1,0 +1,159 @@
+/* =========================================================================
+   Resume page styles — ported from the OhMyCV "Template 1" backbone CSS.
+   The original template targeted attributes generated at runtime by the
+   OhMyCV Vue app (e.g. [data-scope="vue-smart-pages"][data-part="page"] and
+   [data-scope="cross-ref"]). Those elements do not exist in a Jekyll build,
+   so every selector below is retargeted to the real HTML produced by the
+   `resume` layout + kramdown.
+   ========================================================================= */
+
+/* ---- Page card ------------------------------------------------------- */
+
+#resume-preview {
+  padding: 2rem 0;
+}
+
+#resume-preview .resume-page {
+  background-color: white;
+  color: black;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+  line-height: 1.45;
+  text-align: justify;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+#resume-preview p,
+#resume-preview li,
+#resume-preview dl {
+  margin: 0;
+}
+
+/* ---- Headings -------------------------------------------------------- */
+
+#resume-preview h1,
+#resume-preview h2,
+#resume-preview h3 {
+  font-weight: bold;
+}
+
+#resume-preview h1 {
+  font-size: 2.13em;
+}
+
+#resume-preview h2,
+#resume-preview h3 {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+#resume-preview h2 {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-top: 1.1em;
+}
+
+/* ---- Lists ----------------------------------------------------------- */
+
+#resume-preview ul,
+#resume-preview ol {
+  padding-left: 1.5em;
+  margin: 0.2em 0;
+}
+
+#resume-preview ul {
+  list-style-type: circle;
+}
+
+#resume-preview ol {
+  list-style-type: decimal;
+}
+
+/* ---- Definition lists (two/three-column rows) ------------------------ */
+
+#resume-preview dl {
+  display: flex;
+}
+
+#resume-preview dl dt,
+#resume-preview dl dd:not(:last-child) {
+  flex: 1;
+}
+
+#resume-preview dl dd {
+  margin-left: 0;
+}
+
+#resume-preview dl dd:last-child {
+  text-align: right;
+}
+
+/* ---- Publications (replaces the [data-scope="cross-ref"] block) ------ */
+
+#resume-preview .cv-pub {
+  margin: 0.5em 0;
+  padding-left: 1.4em;
+  text-indent: -1.4em; /* hanging indent on the [P#] label */
+}
+
+#resume-preview .cv-pub p {
+  margin: 0;
+}
+
+/* ---- KaTeX / icons / images ------------------------------------------ */
+
+#resume-preview :not(span.katex-display) > span.katex {
+  font-size: 1em !important;
+}
+
+#resume-preview svg.iconify,
+#resume-preview span.iconify {
+  vertical-align: -0.2em;
+}
+
+#resume-preview img {
+  max-width: 100%;
+}
+
+/* ---- Header ---------------------------------------------------------- */
+
+#resume-preview .resume-header {
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+#resume-preview .resume-header h1 {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+#resume-preview .resume-header-info {
+  line-height: 1.7;
+}
+
+#resume-preview .resume-header-item:not(.no-separator)::after {
+  content: " | ";
+}
+
+/* ---- Dark & print mode ----------------------------------------------- */
+
+.dark #resume-preview .resume-page {
+  background-color: white; /* keep the sheet white even in dark theme */
+  color: black;
+}
+
+@media print {
+  #resume-preview {
+    padding: 0;
+  }
+  #resume-preview .resume-page {
+    box-shadow: none;
+    max-width: none;
+  }
+}

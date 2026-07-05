@@ -1,0 +1,74 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %} | {{ site.name | default: site.title }}</title>
+    {% include head.html %}
+    {% include head/custom.html %}
+
+    <!-- Iconify runtime: renders <span class="iconify" data-icon="..."></span> into SVG -->
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+
+    <!-- KaTeX: renders inline $...$ math (used in the Skills section) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+      onload="renderMathInElement(document.getElementById('resume-preview'), {delimiters:[{left:'$',right:'$',display:false}]});"></script>
+
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/resume.css">
+  </head>
+
+  <body class="resume-layout">
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div id="main" role="main">
+      <div id="resume-preview">
+        <div class="resume-page">
+
+          {% comment %} ---- Header rendered from front matter ---- {% endcomment %}
+          <div class="resume-header">
+            {% if page.name %}<h1>{{ page.name }}</h1>{% endif %}
+            {% if page.header %}
+            <div class="resume-header-info">
+              {% for item in page.header %}
+                {%- if item.newLine and forloop.first == false -%}<br/>{%- endif -%}
+                {%- assign next_i = forloop.index -%}
+                {%- assign next_item = page.header[next_i] -%}
+                {%- assign show_sep = true -%}
+                {%- if forloop.last -%}{%- assign show_sep = false -%}{%- endif -%}
+                {%- if next_item.newLine -%}{%- assign show_sep = false -%}{%- endif -%}
+                <span class="resume-header-item{% unless show_sep %} no-separator{% endunless %}">{% if item.link %}<a href="{{ item.link }}">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+
+          {% comment %} ---- Markdown body ---- {% endcomment %}
+          <div class="resume-body">
+            {{ content }}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

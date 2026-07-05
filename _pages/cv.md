@@ -1,64 +1,117 @@
 ---
-layout: archive
+layout: resume
 title: "CV"
 permalink: /cv/
-author_profile: true
 redirect_from:
   - /resume
+name: Haha Ha
+header:
+  - text: |
+      <span style="font-size: 1.2em; font-weight: bold;">Applying for: Cooking Engineer</span>
+  - text: <span class="iconify" data-icon="tabler:phone"></span> (+1) 123-456-7890
+    newLine: true
+  - text: <span class="iconify" data-icon="tabler:mail"></span> icancook@email.com
+    link: mailto:icancook@email.com
+  - text: <span class="iconify" data-icon="tabler:brand-github"></span> Renovamen
+    link: https://github.com/Renovamen
+  - text: <span class="iconify" data-icon="charm:person"></span> zxh.me
+    link: https://zxh.me
 ---
 
-{% include base_path %}
+<!-- Important: Replace all template content, especially contact details, with your own information. -->
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<!-- Important: When updating your email address, remember to change both the "text" (visible text) and the "link" (underlying hyperlink) fields. -->
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Education
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+<!-- The lone `^` between entries is a kramdown "end-of-block" marker. It keeps
+     each entry in its own <dl> so the flex two-column layout works. Keep it. -->
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+**Harvest University**
+: Cambridge, MA
+^
+
+M.S. in Cooking Science
+: 09/2021 - 01/2023
+^
+
+**Huangdu Institute of Tofu**
+: Shanghai, China
+^
+
+B.Eng. in Salad Engineering
+: 09/2016 - 07/2020
+
+
+## Publications
+
+<div class="cv-pub" id="P1" markdown="1">
+**[P1]&nbsp;&nbsp;Eating is All You Need**<br/>
+<u>Haha Ha</u>, San Zhang<br/>
+*Conference on Nutritional Ingredients Processing Systems (NIPS), 2099*
+</div>
+
+<div class="cv-pub" id="P2" markdown="1">
+**[P2]&nbsp;&nbsp;You Only Cook Once: Unified, Real-Time Mapo Tofu Recipe**<br/>
+<u>Haha Ha</u>, San Zhang, Si Li, Wu Wang<br/>
+*Culinary Visualization and Potato Roasting Conference (CVPR), 2077 **(Best Paper Honorable Mention)***
+</div>
+
+
+## Experience
+
+**Cooking Engineer Intern**
+: Microwavesoft
+: 07/2021 - Present
+
+- Developed an innovative, versatile cooking methodology applicable across diverse ingredients, incorporating and improving upon recent culinary trends
+- Created a streamlined cream of mushroom soup recipe, achieving results comparable to complex state-of-the-art techniques through a novel mushroom-cutting approach; published in NIPS 2099 (see [P1](#P1))
+- Designed a specialized cooking pan that enhanced research efficiency for team members
+
+
+**Engineering Chef Intern**
+: University of California, Berkebake
+: 08/2020 - Present
+
+- Developed a precise mapo tofu quality assessment technique using thermometer-based measurements
+- Invented a rapid stir-frying algorithm for tofu cooking, replacing vague instructions like "add as much as you can" with specific hot sauce measurements; published in CVPR 2077 (see [P2](#P2))
+- Outperformed SOTA cooking methods in both efficiency and quality across experiments with popular tofu types
+
+
+**Student Chef**
+: Cabbage Melon University
+: 03/2020 - 06/2020
+
+- Developed an innovative mapo tofu consumption framework utilizing a spoon-chopstick combination
+- Engineered a filtering method for tofu dataset creation, inspired by bean grinding techniques
+- Established two new metrics for evaluating eating plan novelty and diversity
+- Significantly surpassed existing methods and baselines in diversity, novelty, and coherence
+
+
+**Research Chef Intern**
+: Snapchopstick
+: 07/2018 - 08/2018
+
+- Designed two novel sandwiches by repurposing breads and meat from traditional bacon cheeseburgers, maximizing resource efficiency
+- Leveraged structure duality to boost cooking speed for two complementary tasks based on shared ingredients
+- Surpassed strong baselines on QWE'15 and ASDF'14 dataset
+
+
+## Awards and Honors
+
+**Gold**, International Collegiate Catching Fish Contest (ICCFC)
+: 2018
+^
+
+**First Prize**, China National Scholarship for Outstanding Dragon Killers
+: 2017, 2018
+
+
+## Skills
+
+**Programming Languages:** <span class="iconify" data-icon="vscode-icons:file-type-python"></span> Frython, <span class="iconify" data-icon="vscode-icons:file-type-js-official"></span> JavaSauce / <span class="iconify" data-icon="vscode-icons:file-type-typescript-official"></span> TypeSauce, <span class="iconify" data-icon="vscode-icons:file-type-cpp2"></span> Cheese++, <span class="iconify" data-icon="logos:java" data-inline="false"></span> Java Bean
+
+**Tools and Frameworks:** GrillHub, PanFlow, TensorFork, SpiceNet, $\LaTeX$
+
+**Languages:** Chinese (native), English (proficient)
